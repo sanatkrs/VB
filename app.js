@@ -2,6 +2,7 @@ const express  = require("express")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const date = require(__dirname + "/date.js")
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -88,6 +89,6 @@ app.post("/delete", function(req, res) {
     })
 })
 
-app.listen(3001, function(){
-    console.log("Server started on port 3001")
+app.listen(port, function(){
+    console.log("Server started on port " + port)
 })
